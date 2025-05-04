@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 
-
 const Hero = () => {
   const { t, toggleLanguage } = useLanguage();
   const { darkMode, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    document.body.classList.toggle("dark-mode", darkMode);
-  }, [darkMode]);
-
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero}> 
       <div className={styles.topBar}>
         <h2 className={styles.name}>Sevgi</h2>
         <div className={styles.controls}>

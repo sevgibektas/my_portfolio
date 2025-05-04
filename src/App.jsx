@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import { LanguageProvider } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
 
+
 function App() {
   return (
     <ThemeProvider>

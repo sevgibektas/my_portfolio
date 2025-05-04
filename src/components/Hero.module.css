@@ -23,45 +23,41 @@
   .hero::before {
     left: 0;
     width: 70%;
-    background-color: var(--left-bg);
+    background-color: #4731d3;
   }
   
   .hero::after {
     right: 0;
     width: 30%;
-    background-color: var(--right-bg);
+    background-color: #cbf281;
   }
   
-  
-  /* Dark Mode */
-  body.dark-mode .hero::before {
+  /* DARK MODE */
+  :global(body.dark-mode) .hero::before {
     background-color: #171043;
   }
   
-  body.dark-mode .hero::after {
+  :global(body.dark-mode) .hero::after {
     background-color: #211f0b;
   }
   
-  
-  /* Light Theme Variables */
-  :root {
+  /* Toggle button text vars */
+  :global(body) {
     --left-bg: #4731d3;
     --right-bg: #cbf281;
     --toggle-text: #000;
   }
   
-  /* Dark Theme Variables */
-  body.dark-mode {
+  :global(body.dark-mode) {
     --left-bg: #171043;
     --right-bg: #211f0b;
     --toggle-text: #fff;
   }
   
-  /* Toggle button text */
   .toggleButton {
     background: none;
     border: none;
-    color: #000;
+    color: var(--toggle-text);
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
@@ -72,134 +68,118 @@
     transition: background-color 0.3s ease;
   }
   
-    
-    /* İçerik */
+  .toggleButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 40px 60px;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .textBlock {
+    max-width: 520px;
+    color: #cbf281;
+  }
+  
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .subtitle {
+    margin-top: 1rem;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+  }
+  
+  :global(.dark-mode) .btn {
+    background-color: #211f0b;
+    color: #fff;
+  }
+  
+  .image {
+    width: 360px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
+      0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 60px;
-      padding: 40px 60px;
-      max-width: 1140px;
-      width: 100%;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 2;
+      flex-direction: column;
+      text-align: center;
     }
-    
-    .textBlock {
-      max-width: 520px;
-      color: #cbf281;
-    }
-    
-    .title {
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    
-    .subtitle {
-      margin-top: 1rem;
-      color: white;
-      font-size: 18px;
-      font-weight: 400;
-    }
-    
-    .buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 24px;
-      flex-wrap: wrap;
-    }
-    
-    .btn {
-      font-size: 16px;
-      font-weight: 500;
-      padding: 10px 20px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      background-color: #ffffff;
-      color: #000000;
-      transition: all 0.2s ease-in-out;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    }
-    
-    .btn:hover {
-      transform: scale(1.05);
-      background-color: #f1f1f1;
-    }
-    
-    .dark-mode .btn {
-      background-color: #211f0b;
-      color: #fff;
-    }
-    
-    
+  
     .image {
-      width: 360px;
-      height: 400px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0px 18px 88px -4px rgba(24, 39, 75, 0.14),
-        0px 8px 28px -6px rgba(24, 39, 75, 0.12);
+      width: 280px;
+      height: auto;
     }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .content {
-        flex-direction: column;
-        text-align: center;
-      }
-    
-      .image {
-        width: 280px;
-        height: auto;
-      }
-    
-      .title {
-        font-size: 38px;
-      }
+  
+    .title {
+      font-size: 38px;
     }
-    .topBar {
-      position: absolute;
-      top: 20px;
-      left: 40px;
-      right: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 3;
-    }
-    
-    .name {
-      font-size: 20px;
-      font-weight: 700;
-      color: #cbf281;
-    }
-    
-    .controls {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    
-    .toggleButton {
-      background: none;
-      border: none;
-      color: var(--toggle-text);
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      padding: 6px 12px;
-      border-radius: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(4px);
-      transition: background-color 0.3s ease;
-    }
-    
-    .toggleButton:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-    
+  }
+  
+  .topBar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #cbf281;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
