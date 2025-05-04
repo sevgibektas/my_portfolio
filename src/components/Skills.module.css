@@ -1,0 +1,60 @@
+.section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-skills);
+  }
+  
+  .title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    color: var(--skills-title);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    flex: 1;
+    min-width: 240px;
+  }
+  
+  .skill {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+  
+  .skill span {
+    color: var(--skills-text);
+    font-weight: 500;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .title {
+      text-align: center;
+    }
+  }
+  
+  

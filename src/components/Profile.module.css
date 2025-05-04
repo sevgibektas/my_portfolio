@@ -1,0 +1,96 @@
+.profileSection {
+    width: 100%;
+    min-height: 552px;
+    background-color: #4731d3;
+    padding: 80px 20px;
+    color: white;
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* DARK MODE için sadece arka planı değiştiriyoruz */
+  body.dark-mode .profileSection {
+    background-color: #171043;
+  }
+  .dark {
+    background-color: #171043 !important;
+  }
+  
+
+.wrapper {
+  max-width: 960px;
+  width: 100%;
+}
+
+.title {
+  color: #cbf281;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.column {
+  width: 300px;
+}
+
+.subtitle {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.detailItem {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.detailLabel {
+  width: 120px;
+  color: #cbf281;
+  font-weight: 600;
+}
+
+.detailValue {
+  flex: 1;
+}
+
+.profileImage {
+  width: 300px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #cbf281;
+}
+
+.aboutText {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column, .profileImage {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+}

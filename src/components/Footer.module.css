@@ -1,0 +1,95 @@
+.footer {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode .footer {
+    background-color: #252128;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 483px;
+    text-align: center;
+    color: #4731d3;
+  }
+  
+  body.dark-mode .container {
+    color: #8F88FF;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #120b39;
+  }
+  
+  body.dark-mode .description {
+    color: #FFFFFF;
+  }
+  
+  .email {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #4731d3;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  
+  body.dark-mode .email {
+    color: #8F88FF;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 24px;
+    color: #4731d3;
+  }
+  
+  body.dark-mode .icons {
+    color: #8F88FF;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 24px;
+    }
+  
+    .description {
+      font-size: 14px;
+    }
+  
+    .icons {
+      font-size: 20px;
+    }
+  }
+  .dark {
+    background-color: #252128;
+  }
+  
+  .darkContainer {
+    color: #8F88FF;
+  }
+  
+  .darkText {
+    color: #FFFFFF;
+  }
+  
+  .darkIcons {
+    color: #8F88FF;
+  }
+  
+  
